@@ -34,3 +34,7 @@ enum PlaceType {
 extension PlaceTypeX on PlaceType {
   String get value => this.toString().split('.').last;
 }
+
+extension ListPlaceTypeExt on List<PlaceType> {
+  String get value => map((e) => e.value).join(',');
+}
